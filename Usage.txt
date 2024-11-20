@@ -1,0 +1,16 @@
+Single File Hashing:
+
+Run the command: java MD5HashCalculator generatehash <filepath>
+This calculates the MD5 hash of the specified file and writes the hash to a file with the same name and .md5 extension.
+Multiple File Hashing (Directory):
+
+Run the command: java MD5HashCalculator generatehash <filepath> buildpaths
+This calculates MD5 hashes for all regular files within the specified directory and its subdirectories.
+The results are written to a file named <filepath>_hashes.txt. Each line contains the file path followed by its MD5 hash.
+
+Hash Verification:
+
+Create a file containing expected MD5 hashes for your files in the format "file_path md5 = <expected_hash>".
+Run the command: java MD5HashCalculator checkhash <hashfilepath>
+This compares the expected hashes in the provided file with the calculated hashes for the corresponding files.
+The results are written to a file named <hashfilepath>_results.txt. Each line indicates whether the calculated hash matches the expected hash for the file.
